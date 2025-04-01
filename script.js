@@ -8,15 +8,16 @@ const audio = new Audio("assets/tumibok-ang-poso-ko.mp3");
 //yes button
 yesBtn.addEventListener("click", () => {
     question.innerHTML = "Aaaaa, tumibok ang poso ko<3";
+    gif.style.width = "380px";
     gif.src = "assets/kisses.gif";
     audio.play();
     yesBtn.remove();
     noBtn.remove();
+    
 
     //for mobile 
     if (window.innerWidth <= 700){
-        gif.style.width = "80%";
-        gif.style.width = "80%";
+        gif.style.width = "350px";
     }
 
 });
@@ -27,8 +28,8 @@ noBtn.addEventListener("touchstart", moveNoButton); //mobile
     
 function moveNoButton(){
     const noBtnReact = noBtn.getBoundingClientRect();
-    const maxX = window.innerWidth - noBtn.offsetWidth; 
-    const maxY = window.innerHeight - noBtn.offsetHeight;
+    const maxX = window.innerWidth - noBtn.offsetWidth - 500; 
+    const maxY = window.innerHeight - noBtn.offsetHeight - 500;
 
     const randomX = Math.floor(Math.random() * maxX);
     const randomY = Math.floor(Math.random() * maxY);

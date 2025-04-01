@@ -10,6 +10,15 @@ yesBtn.addEventListener("click", () => {
     question.innerHTML = "Aaaaa, tumibok ang poso ko<3";
     gif.src = "assets/kisses.gif";
     audio.play();
+    yesBtn.remove();
+    noBtn.remove();
+
+    //for mobile 
+    if (window.innerWidth <= 700){
+        gif.style.width = "80%";
+        gif.style.width = "80%";
+    }
+
 });
 
 //for no button

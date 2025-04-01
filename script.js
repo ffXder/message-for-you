@@ -13,14 +13,17 @@ yesBtn.addEventListener("click", () => {
 });
 
 //for no button
-noBtn.addEventListener("mouseover", () => {
+noBtn.addEventListener("mouseover", moveNoButton); //desktop
+noBtn.addEventListener("touchstart", moveNoButton); //mobile
+    
+function moveNoButton(){
     const noBtnReact = noBtn.getBoundingClientRect();
-    const maxX = window.innerWidth - noBtn.width; 
-    const maxY = window.innerHeight - noBtn.height;
+    const maxX = window.innerWidth - noBtn.offsetWidth; 
+    const maxY = window.innerHeight - noBtn.offsetHeight;
 
     const randomX = Math.floor(Math.random() * maxX);
     const randomY = Math.floor(Math.random() * maxY);
 
     noBtn.style.left = randomX + "px";
     noBtn.style.top = randomY + "px";
-});
+}

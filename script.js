@@ -7,7 +7,7 @@ const audio = new Audio("assets/tumibok-ang-poso-ko.mp3");
 
 //yes button
 yesBtn.addEventListener("click", () => {
-    question.innerHTML = "Aaaaa, sabi na e i like u too <3 ";
+    question.innerHTML = "Aaaaa, i like u too pinatibok mo ang poso ko <3 ";
     gif.style.width = "380px";
     gif.src = "assets/kisses.gif";
     audio.play();
